@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Node2D
+
+
+const Pilar = preload(\"res://src/objects/Pilar.tscn\")
+
+var _time: = 0.0
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	_time += delta
+	if _time > 2.0:
+		_time = 0
+		
+		var pilar: = Pilar.instance()
+		add_child(pilar)
+"
+
+[node name="Pilares" type="Node2D"]
+position = Vector2( 1514.79, 539.391 )
+script = SubResource( 1 )

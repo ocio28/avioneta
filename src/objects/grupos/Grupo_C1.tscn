@@ -1,0 +1,69 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://src/objects/Estrella.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/objects/Pilar.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/objects/grupos/Grupo.gd" type="Script" id=3]
+
+[node name="Grupo" type="Node2D"]
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 200.0, -200.0 ],
+"_edit_lock_": true
+}
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+position = Vector2( 712.542, 0 )
+scale = Vector2( 70.7458, 32 )
+
+[node name="Estrella3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1300, 200 )
+
+[node name="Estrella9" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1340, 200 )
+
+[node name="Estrella12" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1380, 200 )
+
+[node name="Estrella10" parent="." instance=ExtResource( 1 )]
+position = Vector2( 920, -140 )
+
+[node name="Estrella11" parent="." instance=ExtResource( 1 )]
+position = Vector2( 960, -180 )
+
+[node name="Estrella13" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1000, -140 )
+
+[node name="Estrella14" parent="." instance=ExtResource( 1 )]
+position = Vector2( 400, -140 )
+
+[node name="Estrella15" parent="." instance=ExtResource( 1 )]
+position = Vector2( 440, -180 )
+
+[node name="Estrella16" parent="." instance=ExtResource( 1 )]
+position = Vector2( 480, -140 )
+
+[node name="Pilar2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 640, 200 )
+
+[node name="Pilar5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 240, 200 )
+
+[node name="Pilar7" parent="." instance=ExtResource( 2 )]
+position = Vector2( 760, 200 )
+
+[node name="Pilar3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 240, -200 )
+scale = Vector2( 1, -1 )
+
+[node name="Pilar6" parent="." instance=ExtResource( 2 )]
+position = Vector2( 640, -200 )
+scale = Vector2( 1, -1 )
+
+[node name="Pilar4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 760, -200 )
+scale = Vector2( 1, -1 )
+
+[node name="Pilar8" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1160, -200 )
+scale = Vector2( 1, -1 )
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]

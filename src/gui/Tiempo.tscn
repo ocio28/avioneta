@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/fonts/Roboto-Bold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://src/gui/Tiempo.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 80
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 1 )
+
+[node name="Tiempo" type="Label"]
+margin_left = 560.0
+margin_top = 14.0
+margin_right = 660.0
+margin_bottom = 117.0
+custom_fonts/font = SubResource( 1 )
+text = "93"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

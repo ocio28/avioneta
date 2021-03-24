@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Flowing Rocks.ogg-238704ad3f0297852434a2ce00c250a3.oggstr"
+
+[deps]
+
+source_file="res://assets/audio/Flowing Rocks.ogg"
+dest_files=[ "res://.import/Flowing Rocks.ogg-238704ad3f0297852434a2ce00c250a3.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
