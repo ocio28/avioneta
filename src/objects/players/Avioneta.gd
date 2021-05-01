@@ -2,10 +2,15 @@ extends Node2D
 
 signal destruido
 
-const roja = preload("res://assets/resources/sheet.planeRed1.atlastex")
-const verde = preload("res://assets/resources/sheet.planeGreen1.atlastex")
-const celeste = preload("res://assets/resources/sheet.planeBlue1.atlastex")
-const amarilla = preload("res://assets/resources/sheet.planeYellow1.atlastex")
+const explosion = preload("res://src/Explosion.tscn")
+#const roja = preload("res://assets/resources/sheet.planeRed1.atlastex")
+#const verde = preload("res://assets/resources/sheet.planeGreen1.atlastex")
+#const celeste = preload("res://assets/resources/sheet.planeBlue1.atlastex")
+#const amarilla = preload("res://assets/resources/sheet.planeYellow1.atlastex")
+const roja = preload("res://src/resources/AlanRojoAnimation.tres")
+const verde = preload("res://src/resources/AlanVerdeAnimation.tres")
+const celeste = preload("res://src/resources/AlanCelesteAnimation.tres")
+const amarilla = preload("res://src/resources/AlanAmarilloAnimation.tres")
 
 const avionetas = [roja, verde, celeste, amarilla]
 onready var sprite: = $Sprite
@@ -17,6 +22,7 @@ const POWER:= 600
 const LIMIT = -300
 
 var _velocity = 0
+var _id = 0
 
 
 func _ready() -> void:
@@ -33,7 +39,11 @@ func _input(event):
 			accion(1)
 			
 func _process(delta: float) -> void:
-	sprite.texture = avionetas[State.indice_avioneta()]
+	if _id != State.indice_avioneta():
+		sprite.frames = avionetas[State.indice_avioneta()]
+		sprite.playing = true
+		_id = State.indice_avioneta()
+		
 	if not State.is_playing():
 		return
 		
@@ -61,8 +71,13 @@ func death():
 	if not is_queued_for_deletion():
 		emit_signal("destruido")
 		AudioFx.play_explosion()
+		instance_explosion()
 		queue_free()
 
+func instance_explosion():
+	var instance = explosion.instance()
+	instance.global_position = global_position
+	get_tree().current_scene.add_child(instance)
 
 func _on_VisibilityNotifier2D_screen_exited() -> void:
 	queue_free()

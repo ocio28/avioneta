@@ -70,19 +70,19 @@ position = Vector2( 100, 0 )
 position = Vector2( 20, 80 )
 
 [node name="Pilar2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 300, 200 )
+position = Vector2( 340, 260 )
 
 [node name="Pilar10" parent="." instance=ExtResource( 2 )]
-position = Vector2( 600, 200 )
+position = Vector2( 560, 200 )
 
 [node name="Pilar11" parent="." instance=ExtResource( 2 )]
 position = Vector2( 1000, 200 )
 
 [node name="Pilar5" parent="." instance=ExtResource( 2 )]
-position = Vector2( 140, 200 )
+position = Vector2( 140, 220 )
 
 [node name="Pilar7" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1340, 240 )
+position = Vector2( 1340, 260 )
 rotation = -0.785398
 
 [node name="Pilar3" parent="." instance=ExtResource( 2 )]
@@ -95,10 +95,19 @@ position = Vector2( 220, -200 )
 scale = Vector2( 1, -1 )
 
 [node name="Pilar4" parent="." instance=ExtResource( 2 )]
-position = Vector2( 540, -200 )
+position = Vector2( 560, -260 )
 scale = Vector2( 1, -1 )
 
 [node name="Pilar8" parent="." instance=ExtResource( 2 )]
-position = Vector2( 660, -200 )
+position = Vector2( 820, -320 )
 scale = Vector2( 1, -1 )
+
+[node name="Pilar9" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1260, -260 )
+scale = Vector2( 1, -1 )
+
+[node name="Pilar12" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1020, -320 )
+scale = Vector2( 1, -1 )
+
 [connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]

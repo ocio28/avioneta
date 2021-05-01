@@ -23,3 +23,13 @@ func _on_Avioneta_destruido() -> void:
 	$Musica.playing = false
 	State.contar_muerte()
 	State.fijar_pb()
+
+
+func _on_CreditosButton_button_down() -> void:
+	$Creditos.visible = true
+	$ControlEmpezar.visible = false
+
+
+func _on_Volver_button_up() -> void:
+	$Creditos.visible = false
+	$ControlEmpezar.visible = true
