@@ -12,8 +12,10 @@ const B3 = preload("res://src/objects/grupos/Grupo_B3.tscn")
 const B4 = preload("res://src/objects/grupos/Grupo_B4.tscn")
 const C1 = preload("res://src/objects/grupos/Grupo_C1.tscn")
 const C2 = preload("res://src/objects/grupos/Grupo_C2.tscn")
+const C3 = preload("res://src/objects/grupos/Grupo_C3.tscn")
 const D1 = preload("res://src/objects/grupos/Grupo_D1.tscn")
 const D2 = preload("res://src/objects/grupos/Grupo_D2.tscn")
+const D3 = preload("res://src/objects/grupos/Grupo_D3.tscn")
 
 const MED1 = preload("res://src/objects/grupos/Grupo_MED1.tscn")
 const MED2 = preload("res://src/objects/grupos/Grupo_MED2.tscn")
@@ -22,8 +24,8 @@ const MED3 = preload("res://src/objects/grupos/Grupo_MED3.tscn")
 #const grupos = [A1, A2, A3, A4, A5, A6, B1, B2, B3, B4, C1]
 const grupo_a = [A1, A2, A3, A4, A5]
 const grupo_b = [B1, B2, B3, B4]
-const grupo_c = [C1, C2]
-const grupo_d = [D1, D2]
+const grupo_c = [C1, C2, C3]
+const grupo_d = [D1, D2, D3]
 const grupo_med = [MED1, MED2, MED3]
 
 const MEDALLA_RATIO = 0.97
@@ -51,12 +53,12 @@ func random_instance():
 	if rf > MEDALLA_RATIO && nivel < grupo_med.size() && nivel >= State.medallas():
 		return grupo_med[State.nivel()].instance()
 		
-	var grupo = null
+	print('nivel', State.nivel())
+	var grupo = grupo_d
 	match State.nivel():
 		0: grupo = grupo_a
 		1: grupo = grupo_b
 		2: grupo = grupo_c
-		3: grupo = grupo_d
 		
 	var rng = randi() % grupo.size()
 	#print('rng', rng)

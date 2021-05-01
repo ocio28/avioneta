@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://src/objects/GameOver.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/resources/gui/blueSheet.blue_button13.atlastex" type="Texture" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://src/objects/players/Avioneta.tscn" type="PackedScene" id=13]
 [ext_resource path="res://assets/resources/sheet.letterJ.atlastex" type="Texture" id=14]
 [ext_resource path="res://src/screens/BotonJugar.gd" type="Script" id=15]
+[ext_resource path="res://src/Creditos.tscn" type="PackedScene" id=16]
 [ext_resource path="res://src/gui/ParallaxBackground.tscn" type="PackedScene" id=21]
 [ext_resource path="res://src/screens/Empezar.gd" type="Script" id=22]
 [ext_resource path="res://src/screens/Gameplay.gd" type="Script" id=24]
@@ -52,14 +53,21 @@ stream = ExtResource( 43 )
 volume_db = -9.176
 autoplay = true
 
-[node name="Empezar" type="Control" parent="."]
+[node name="ControlEmpezar" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Empezar" type="Control" parent="ControlEmpezar"]
 theme = ExtResource( 50 )
 script = ExtResource( 22 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="NinePatchRect" type="NinePatchRect" parent="Empezar"]
+[node name="NinePatchRect" type="NinePatchRect" parent="ControlEmpezar/Empezar"]
 margin_left = 352.0
 margin_top = 70.3663
 margin_right = 888.0
@@ -74,7 +82,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Empezar/NinePatchRect"]
+[node name="HBoxContainer" type="HBoxContainer" parent="ControlEmpezar/Empezar/NinePatchRect"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 alignment = 1
@@ -82,63 +90,64 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="sheetletterA" type="TextureRect" parent="Empezar/NinePatchRect/HBoxContainer"]
+[node name="sheetletterA" type="TextureRect" parent="ControlEmpezar/Empezar/NinePatchRect/HBoxContainer"]
 margin_left = 46.0
 margin_right = 107.0
 margin_bottom = 118.0
 texture = ExtResource( 42 )
 stretch_mode = 4
 
-[node name="sheetletterV" type="TextureRect" parent="Empezar/NinePatchRect/HBoxContainer"]
+[node name="sheetletterV" type="TextureRect" parent="ControlEmpezar/Empezar/NinePatchRect/HBoxContainer"]
 margin_left = 111.0
 margin_right = 172.0
 margin_bottom = 118.0
 texture = ExtResource( 44 )
 stretch_mode = 4
 
-[node name="sheetletterI" type="TextureRect" parent="Empezar/NinePatchRect/HBoxContainer"]
+[node name="sheetletterI" type="TextureRect" parent="ControlEmpezar/Empezar/NinePatchRect/HBoxContainer"]
 margin_left = 176.0
 margin_right = 198.0
 margin_bottom = 118.0
 texture = ExtResource( 48 )
 stretch_mode = 4
 
-[node name="sheetletterO" type="TextureRect" parent="Empezar/NinePatchRect/HBoxContainer"]
+[node name="sheetletterO" type="TextureRect" parent="ControlEmpezar/Empezar/NinePatchRect/HBoxContainer"]
 margin_left = 202.0
 margin_right = 262.0
 margin_bottom = 118.0
 texture = ExtResource( 47 )
 stretch_mode = 4
 
-[node name="sheetletterN" type="TextureRect" parent="Empezar/NinePatchRect/HBoxContainer"]
+[node name="sheetletterN" type="TextureRect" parent="ControlEmpezar/Empezar/NinePatchRect/HBoxContainer"]
 margin_left = 266.0
 margin_right = 319.0
 margin_bottom = 118.0
 texture = ExtResource( 46 )
 stretch_mode = 4
 
-[node name="sheetletterE" type="TextureRect" parent="Empezar/NinePatchRect/HBoxContainer"]
+[node name="sheetletterE" type="TextureRect" parent="ControlEmpezar/Empezar/NinePatchRect/HBoxContainer"]
 margin_left = 323.0
 margin_right = 368.0
 margin_bottom = 118.0
 texture = ExtResource( 45 )
 stretch_mode = 4
 
-[node name="sheetletterT" type="TextureRect" parent="Empezar/NinePatchRect/HBoxContainer"]
+[node name="sheetletterT" type="TextureRect" parent="ControlEmpezar/Empezar/NinePatchRect/HBoxContainer"]
 margin_left = 372.0
 margin_right = 424.0
 margin_bottom = 118.0
 texture = ExtResource( 49 )
 stretch_mode = 4
 
-[node name="sheetletterA2" type="TextureRect" parent="Empezar/NinePatchRect/HBoxContainer"]
+[node name="sheetletterA2" type="TextureRect" parent="ControlEmpezar/Empezar/NinePatchRect/HBoxContainer"]
 margin_left = 428.0
 margin_right = 489.0
 margin_bottom = 118.0
 texture = ExtResource( 42 )
 stretch_mode = 4
 
-[node name="Eliminar" type="TextureButton" parent="Empezar"]
+[node name="Eliminar" type="TextureButton" parent="ControlEmpezar/Empezar"]
+visible = false
 margin_left = 1073.0
 margin_top = 497.0
 margin_right = 1263.0
@@ -150,7 +159,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="Empezar/Eliminar"]
+[node name="Label" type="Label" parent="ControlEmpezar/Empezar/Eliminar"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_bottom = -12.0
@@ -163,7 +172,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="NinePatchRect2" type="NinePatchRect" parent="Empezar"]
+[node name="NinePatchRect2" type="NinePatchRect" parent="ControlEmpezar/Empezar"]
 margin_left = 1073.0
 margin_top = 285.243
 margin_right = 1262.0
@@ -178,7 +187,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Empezar/NinePatchRect2"]
+[node name="VBoxContainer" type="VBoxContainer" parent="ControlEmpezar/Empezar/NinePatchRect2"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 alignment = 1
@@ -186,7 +195,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="Empezar/NinePatchRect2/VBoxContainer"]
+[node name="Label" type="Label" parent="ControlEmpezar/Empezar/NinePatchRect2/VBoxContainer"]
 margin_top = 8.0
 margin_right = 189.0
 margin_bottom = 45.0
@@ -198,7 +207,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Record" type="Label" parent="Empezar/NinePatchRect2/VBoxContainer"]
+[node name="Record" type="Label" parent="ControlEmpezar/Empezar/NinePatchRect2/VBoxContainer"]
 margin_top = 49.0
 margin_right = 189.0
 margin_bottom = 86.0
@@ -211,7 +220,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label2" type="Label" parent="Empezar/NinePatchRect2/VBoxContainer"]
+[node name="Label2" type="Label" parent="ControlEmpezar/Empezar/NinePatchRect2/VBoxContainer"]
 margin_top = 90.0
 margin_right = 189.0
 margin_bottom = 127.0
@@ -223,7 +232,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Muertes" type="Label" parent="Empezar/NinePatchRect2/VBoxContainer"]
+[node name="Muertes" type="Label" parent="ControlEmpezar/Empezar/NinePatchRect2/VBoxContainer"]
 margin_top = 131.0
 margin_right = 189.0
 margin_bottom = 168.0
@@ -236,7 +245,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="NinePatchRect3" type="NinePatchRect" parent="Empezar"]
+[node name="NinePatchRect3" type="NinePatchRect" parent="ControlEmpezar/Empezar"]
 margin_left = 41.7078
 margin_top = 285.243
 margin_right = 230.708
@@ -251,7 +260,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Empezar/NinePatchRect3"]
+[node name="VBoxContainer" type="VBoxContainer" parent="ControlEmpezar/Empezar/NinePatchRect3"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 alignment = 1
@@ -259,7 +268,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="Empezar/NinePatchRect3/VBoxContainer"]
+[node name="Label" type="Label" parent="ControlEmpezar/Empezar/NinePatchRect3/VBoxContainer"]
 margin_top = 49.0
 margin_right = 189.0
 margin_bottom = 86.0
@@ -271,7 +280,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label2" type="Label" parent="Empezar/NinePatchRect3/VBoxContainer"]
+[node name="Label2" type="Label" parent="ControlEmpezar/Empezar/NinePatchRect3/VBoxContainer"]
 margin_top = 90.0
 margin_right = 189.0
 margin_bottom = 127.0
@@ -283,7 +292,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="BotonJugar" type="NinePatchRect" parent="Empezar"]
+[node name="BotonJugar" type="NinePatchRect" parent="ControlEmpezar/Empezar"]
 margin_left = 443.0
 margin_top = 497.0
 margin_right = 814.0
@@ -300,7 +309,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Empezar/BotonJugar"]
+[node name="HBoxContainer" type="HBoxContainer" parent="ControlEmpezar/Empezar/BotonJugar"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 alignment = 1
@@ -308,60 +317,96 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="sheetletterJ" type="TextureRect" parent="Empezar/BotonJugar/HBoxContainer"]
+[node name="sheetletterJ" type="TextureRect" parent="ControlEmpezar/Empezar/BotonJugar/HBoxContainer"]
 margin_left = 49.0
 margin_right = 91.0
 margin_bottom = 101.0
 texture = ExtResource( 14 )
 stretch_mode = 4
 
-[node name="sheetletterJ2" type="TextureRect" parent="Empezar/BotonJugar/HBoxContainer"]
+[node name="sheetletterJ2" type="TextureRect" parent="ControlEmpezar/Empezar/BotonJugar/HBoxContainer"]
 margin_left = 95.0
 margin_right = 146.0
 margin_bottom = 101.0
 texture = ExtResource( 10 )
 stretch_mode = 4
 
-[node name="sheetletterJ3" type="TextureRect" parent="Empezar/BotonJugar/HBoxContainer"]
+[node name="sheetletterJ3" type="TextureRect" parent="ControlEmpezar/Empezar/BotonJugar/HBoxContainer"]
 margin_left = 150.0
 margin_right = 202.0
 margin_bottom = 101.0
 texture = ExtResource( 11 )
 stretch_mode = 4
 
-[node name="sheetletterJ4" type="TextureRect" parent="Empezar/BotonJugar/HBoxContainer"]
+[node name="sheetletterJ4" type="TextureRect" parent="ControlEmpezar/Empezar/BotonJugar/HBoxContainer"]
 margin_left = 206.0
 margin_right = 267.0
 margin_bottom = 101.0
 texture = ExtResource( 42 )
 stretch_mode = 4
 
-[node name="sheetletterJ5" type="TextureRect" parent="Empezar/BotonJugar/HBoxContainer"]
+[node name="sheetletterJ5" type="TextureRect" parent="ControlEmpezar/Empezar/BotonJugar/HBoxContainer"]
 margin_left = 271.0
 margin_right = 322.0
 margin_bottom = 101.0
 texture = ExtResource( 9 )
 stretch_mode = 4
 
-[node name="LinkButton" type="LinkButton" parent="Empezar/BotonJugar"]
+[node name="LinkButton" type="LinkButton" parent="ControlEmpezar/Empezar/BotonJugar"]
 margin_right = 536.0
 margin_bottom = 101.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Hangar" parent="Empezar" instance=ExtResource( 5 )]
+[node name="Hangar" parent="ControlEmpezar/Empezar" instance=ExtResource( 5 )]
 margin_left = 443.126
 margin_top = 285.243
 margin_right = 443.126
 margin_bottom = 285.243
+
+[node name="CreditosButton" type="TextureButton" parent="ControlEmpezar/Empezar"]
+margin_left = 41.7078
+margin_top = 497.0
+margin_right = 231.708
+margin_bottom = 546.0
+texture_normal = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ControlEmpezar/Empezar/CreditosButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = 1.0
+text = "creditos"
+align = 1
 
 [node name="Spawner" parent="." instance=ExtResource( 33 )]
 position = Vector2( 1439.21, 334.939 )
 
 [node name="GameOver" parent="." instance=ExtResource( 1 )]
 position = Vector2( 1727.7, 43.2426 )
+
+[node name="Creditos" parent="." instance=ExtResource( 16 )]
+visible = false
+margin_left = 41.7078
+margin_top = 70.3663
+margin_right = 41.7078
+margin_bottom = 70.3663
+
+[node name="Volver" type="ToolButton" parent="Creditos"]
+margin_left = -30.0
+margin_top = -104.0
+margin_right = 1250.0
+margin_bottom = 520.0
+__meta__ = {
+"_edit_lock_": true
+}
+
 [connection signal="destruido" from="Avioneta" to="." method="_on_Avioneta_destruido"]
-[connection signal="button_up" from="Empezar/Eliminar" to="Empezar/Eliminar" method="_on_Eliminar_button_up"]
-[connection signal="gui_input" from="Empezar/BotonJugar" to="Empezar/BotonJugar" method="_on_BotonJugar_gui_input"]
-[connection signal="button_up" from="Empezar/BotonJugar/LinkButton" to="Empezar/BotonJugar" method="_on_LinkButton_button_up"]
+[connection signal="button_up" from="ControlEmpezar/Empezar/Eliminar" to="ControlEmpezar/Empezar/Eliminar" method="_on_Eliminar_button_up"]
+[connection signal="gui_input" from="ControlEmpezar/Empezar/BotonJugar" to="ControlEmpezar/Empezar/BotonJugar" method="_on_BotonJugar_gui_input"]
+[connection signal="button_up" from="ControlEmpezar/Empezar/BotonJugar/LinkButton" to="ControlEmpezar/Empezar/BotonJugar" method="_on_LinkButton_button_up"]
+[connection signal="button_down" from="ControlEmpezar/Empezar/CreditosButton" to="." method="_on_CreditosButton_button_down"]
+[connection signal="button_up" from="Creditos/Volver" to="." method="_on_Volver_button_up"]

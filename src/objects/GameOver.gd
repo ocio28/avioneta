@@ -16,4 +16,4 @@ func _process(delta: float) -> void:
 	if position.x > 0 && State.ending:
 		position.x -= 200 * delta
 		
-	$Creditos.visible = position.x <= 0
+	$Control.visible = position.x <= 0

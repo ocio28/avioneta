@@ -43,7 +43,7 @@ position = Vector2( 420, -120 )
 position = Vector2( 160, 200 )
 
 [node name="Pilar5" parent="." instance=ExtResource( 2 )]
-position = Vector2( 620, 200 )
+position = Vector2( 620, 240 )
 
 [node name="Pilar7" parent="." instance=ExtResource( 2 )]
 position = Vector2( 1080, 200 )
@@ -59,4 +59,5 @@ scale = Vector2( 1, -1 )
 [node name="Pilar4" parent="." instance=ExtResource( 2 )]
 position = Vector2( 1080, -200 )
 scale = Vector2( 1, -1 )
+
 [connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]

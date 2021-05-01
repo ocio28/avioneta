@@ -19,13 +19,13 @@ __meta__ = {
 }
 
 [node name="Estrella3" parent="." instance=ExtResource( 1 )]
-position = Vector2( 980, 200 )
+position = Vector2( 1180, 200 )
 
 [node name="Estrella9" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1020, 200 )
+position = Vector2( 1220, 200 )
 
 [node name="Estrella12" parent="." instance=ExtResource( 1 )]
-position = Vector2( 1060, 200 )
+position = Vector2( 1260, 200 )
 
 [node name="Estrella10" parent="." instance=ExtResource( 1 )]
 position = Vector2( 540, -120 )
@@ -46,14 +46,14 @@ position = Vector2( 80, -20 )
 position = Vector2( 120, 20 )
 
 [node name="Pilar2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 420, 200 )
+position = Vector2( 420, 240 )
 
 [node name="Pilar5" parent="." instance=ExtResource( 2 )]
 position = Vector2( 60, 200 )
 
 [node name="Pilar7" parent="." instance=ExtResource( 2 )]
-position = Vector2( 840, 240 )
-rotation = -0.785398
+position = Vector2( 940, 240 )
+rotation = -0.523599
 
 [node name="Pilar3" parent="." instance=ExtResource( 2 )]
 position = Vector2( 120, -260 )
@@ -61,7 +61,7 @@ rotation = 0.785398
 scale = Vector2( 1, -1 )
 
 [node name="Pilar6" parent="." instance=ExtResource( 2 )]
-position = Vector2( 420, -200 )
+position = Vector2( 420, -240 )
 scale = Vector2( 1, -1 )
 
 [node name="Pilar4" parent="." instance=ExtResource( 2 )]
@@ -71,4 +71,5 @@ scale = Vector2( 1, -1 )
 [node name="Pilar8" parent="." instance=ExtResource( 2 )]
 position = Vector2( 960, -200 )
 scale = Vector2( 1, -1 )
+
 [connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]

@@ -43,7 +43,7 @@ func _process(delta: float) -> void:
 		
 	_playtime += delta
 	_level_timeout += delta
-	if _level_timeout > 20.0:
+	if _level_timeout > 30.0:
 		_level_timeout = 0.0
 		level_up()
 	
