@@ -10,7 +10,6 @@ config_version=4
 
 _global_script_classes=[  ]
 _global_script_class_icons={
-
 }
 
 [application]
@@ -52,6 +51,7 @@ tap={
 
 [input_devices]
 
+pointing/ios/touch_delay=0.001
 pointing/emulate_touch_from_mouse=true
 
 [layer_names]
