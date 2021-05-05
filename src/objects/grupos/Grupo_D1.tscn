@@ -74,11 +74,11 @@ position = Vector2( 140, 260 )
 
 [node name="Pilar7" parent="." instance=ExtResource( 2 )]
 position = Vector2( 1320, 260 )
-rotation = -0.785398
+rotation = -0.523599
 
 [node name="Pilar3" parent="." instance=ExtResource( 2 )]
 position = Vector2( 760, -260 )
-rotation = 0.785398
+rotation = 0.523599
 scale = Vector2( 1, -1 )
 
 [node name="Pilar6" parent="." instance=ExtResource( 2 )]
@@ -90,15 +90,15 @@ position = Vector2( 1500, -200 )
 scale = Vector2( 1, -1 )
 
 [node name="Pilar13" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1000, -240 )
+position = Vector2( 1000, -200 )
 scale = Vector2( 1, -1 )
 
 [node name="Pilar14" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1160, -240 )
+position = Vector2( 1160, -200 )
 scale = Vector2( 1, -1 )
 
 [node name="Pilar15" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1320, -240 )
+position = Vector2( 1320, -200 )
 scale = Vector2( 1, -1 )
 
 [connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]

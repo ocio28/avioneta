@@ -8,15 +8,21 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Control",
+"class": "Mensaje",
+"language": "GDScript",
+"path": "res://src/gui/Mensaje.gd"
+} ]
 _global_script_class_icons={
+"Mensaje": ""
 }
 
 [application]
 
 config/name="Avioneta"
 run/main_scene="res://src/screens/Gameplay.tscn"
-boot_splash/image="res://assets/imagenes/splash.png"
+boot_splash/image="res://splashscreen.png"
 boot_splash/fullsize=false
 boot_splash/bg_color=Color( 0, 0, 0, 1 )
 config/icon="res://icon.png"

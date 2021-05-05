@@ -43,10 +43,11 @@ func _process(delta: float) -> void:
 		
 	_playtime += delta
 	_level_timeout += delta
-	if _level_timeout > 30.0:
+	if _level_timeout > (20.0 + _nivel * 2):
 		_level_timeout = 0.0
 		level_up()
-	
+
+		
 	if _playtime > 100:
 		ending = true
 		fijar_pb()

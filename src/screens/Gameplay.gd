@@ -1,5 +1,6 @@
 extends Node2D
 
+const mensaje = preload("res://src/gui/Mensaje.tscn")
 
 var _reseting = false
 var _reset_time = 0
@@ -23,6 +24,10 @@ func _on_Avioneta_destruido() -> void:
 	$Musica.playing = false
 	State.contar_muerte()
 	State.fijar_pb()
+	#var msg = Mensaje.new()
+	var msg = mensaje.instance()
+	print('msg', msg)
+	$ForeGround.add_child(msg)
 
 
 func _on_CreditosButton_button_down() -> void:

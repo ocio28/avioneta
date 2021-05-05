@@ -79,11 +79,11 @@ position = Vector2( 560, 200 )
 position = Vector2( 1000, 200 )
 
 [node name="Pilar5" parent="." instance=ExtResource( 2 )]
-position = Vector2( 140, 220 )
+position = Vector2( 140, 200 )
 
 [node name="Pilar7" parent="." instance=ExtResource( 2 )]
 position = Vector2( 1340, 260 )
-rotation = -0.785398
+rotation = -0.523599
 
 [node name="Pilar3" parent="." instance=ExtResource( 2 )]
 position = Vector2( 80, -260 )
@@ -91,19 +91,19 @@ rotation = 0.785398
 scale = Vector2( 1, -1 )
 
 [node name="Pilar6" parent="." instance=ExtResource( 2 )]
-position = Vector2( 220, -200 )
+position = Vector2( 240, -200 )
 scale = Vector2( 1, -1 )
 
 [node name="Pilar4" parent="." instance=ExtResource( 2 )]
-position = Vector2( 560, -260 )
+position = Vector2( 560, -240 )
 scale = Vector2( 1, -1 )
 
 [node name="Pilar8" parent="." instance=ExtResource( 2 )]
-position = Vector2( 820, -320 )
+position = Vector2( 800, -260 )
 scale = Vector2( 1, -1 )
 
 [node name="Pilar9" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1260, -260 )
+position = Vector2( 1280, -200 )
 scale = Vector2( 1, -1 )
 
 [node name="Pilar12" parent="." instance=ExtResource( 2 )]

@@ -42,11 +42,18 @@ position = Vector2( 1100, 160 )
 [node name="Pilar2" parent="." instance=ExtResource( 2 )]
 position = Vector2( 380, 200 )
 
+[node name="Pilar6" parent="." instance=ExtResource( 2 )]
+position = Vector2( 140, 300 )
+
 [node name="Pilar5" parent="." instance=ExtResource( 2 )]
 position = Vector2( 860, 240 )
 
 [node name="Pilar3" parent="." instance=ExtResource( 2 )]
 position = Vector2( 380, -200 )
+scale = Vector2( 1, -1 )
+
+[node name="Pilar7" parent="." instance=ExtResource( 2 )]
+position = Vector2( 140, -280 )
 scale = Vector2( 1, -1 )
 
 [node name="Pilar4" parent="." instance=ExtResource( 2 )]

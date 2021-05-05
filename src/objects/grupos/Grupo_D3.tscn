@@ -67,13 +67,13 @@ position = Vector2( 300, 0 )
 position = Vector2( 180, 0 )
 
 [node name="Pilar2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 300, 240 )
+position = Vector2( 300, 200 )
 
 [node name="Pilar11" parent="." instance=ExtResource( 2 )]
 position = Vector2( 1200, 200 )
 
 [node name="Pilar5" parent="." instance=ExtResource( 2 )]
-position = Vector2( 140, 240 )
+position = Vector2( 140, 200 )
 
 [node name="Pilar7" parent="." instance=ExtResource( 2 )]
 position = Vector2( 820, 260 )

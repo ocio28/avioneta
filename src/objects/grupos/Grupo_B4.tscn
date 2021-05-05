@@ -50,7 +50,7 @@ position = Vector2( 140, -200 )
 scale = Vector2( 1, -1 )
 
 [node name="Pilar6" parent="." instance=ExtResource( 2 )]
-position = Vector2( 580, -240 )
+position = Vector2( 580, -200 )
 scale = Vector2( 1, -1 )
 
 [node name="Pilar4" parent="." instance=ExtResource( 2 )]
