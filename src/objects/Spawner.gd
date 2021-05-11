@@ -16,6 +16,8 @@ const C3 = preload("res://src/objects/grupos/Grupo_C3.tscn")
 const D1 = preload("res://src/objects/grupos/Grupo_D1.tscn")
 const D2 = preload("res://src/objects/grupos/Grupo_D2.tscn")
 const D3 = preload("res://src/objects/grupos/Grupo_D3.tscn")
+const D4 = preload("res://src/objects/grupos/Grupo_D4.tscn")
+const D5 = preload("res://src/objects/grupos/Grupo_D5.tscn")
 
 const MED1 = preload("res://src/objects/grupos/Grupo_MED1.tscn")
 const MED2 = preload("res://src/objects/grupos/Grupo_MED2.tscn")
@@ -25,7 +27,7 @@ const MED3 = preload("res://src/objects/grupos/Grupo_MED3.tscn")
 const grupo_a = [A1, A2, A3, A4, A5]
 const grupo_b = [B1, B2, B3, B4]
 const grupo_c = [C1, C2, C3]
-const grupo_d = [D1, D2, D3]
+const grupo_d = [D1, D2, D3, D4, D5]
 const grupo_med = [MED1, MED2, MED3]
 
 const MEDALLA_RATIO = 0.97
@@ -35,7 +37,7 @@ export var pilar_disabled: = false
 var _time: = 4.0
 
 func _process(delta: float) -> void:
-	if not State.is_playing() || State.ending:
+	if not State.is_playing() || State.ending || not State.player_alive:
 		return
 		
 	_time += delta

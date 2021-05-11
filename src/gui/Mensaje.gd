@@ -9,35 +9,34 @@ const avionetas = [redIcon, greenIcon, blueIcon, yellowIcon]
 
 const mensajes: = [
 	[
-		'Weon morimos altiro',
-		'Tamos agarrando ritmo',
-		'Hay que ponerle weno, demas llegamos',
-		'Yapo tamo ahi!!!!',
-		'Esta wea ya le queda poco',
+		'Alo me escuchan? *Cambio',
+		'Parece que estamos en el lugar correcto',
+		'Perdimos la comunicación despues de una tormenta',
+		'Parece que falta muy poco!',
+		'La caverna esta justo adelante!'
 	],
 	[
-		'Pero que boludes',
-		'Andáte a la mierda avioneta',
-		'Estamos en la b :(',
-		'Esto sha es... demaciado',
-		'Sos lo mas grande!!!!',
+		'Alo El motor esta fallando *Cambio',
+		'Esto se va a poner feo...',
+		'*Cambio parece que estamos entrando a una caverna congelada *Cambio',
+		'Nadie habia llegado antes tan lejos como nosotros',
+		'El tesoro!! La tenemos!!!'
 	],
 	[
-		'A la verga',
-		'Esta chingon cabron!',
-		'Guadalupe yo que se me escuchas...',
-		'Anda si esta bien cabron',
-		'Esto esta mamado',
+		'No hay caso, no puedo comunicarme',
+		'Voy sólo al abismo!!',
+		'*Cambio alo?, creo que estoy recibiendo una señal!',
+		'Madre de dios... que.. chingawat',
+		'Olle y despues como volvemos? el motor no da mas'
 	],
 	[
-		':\'(',
-		'Ay que dolor que dolor!',
-		'Ya vamo perdiendo......',
-		'En la b',
-		'Lo tenia!!! lo tenia!!!',
-	],
+		'Creo que escuche algo en la radio',
+		'Alo *Cambio *Cambio alo alo!',
+		'Es cierta la leyenda de la caverna cavernicola!',
+		'Asi como dicen, somos los primeros, la mejor parte!',
+		'Estamos todos comunicados? quien falta?'
+	]
 ]
-
 
 onready var icon = $Panel/Icon
 onready var label = $Panel/Label

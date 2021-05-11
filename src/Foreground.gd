@@ -8,7 +8,7 @@ const Ground5 = preload("res://assets/resources/sheet.groundIce.atlastex")
 export var speed: = -400.0
 
 func _process(delta: float) -> void:
-	if not State.is_playing():
+	if not State.is_playing() || not State.player_alive:
 		return
 		
 	motion_offset.x += speed * delta

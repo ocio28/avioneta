@@ -1,0 +1,127 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://src/objects/Estrella.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/objects/Pilar.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/objects/grupos/Grupo.gd" type="Script" id=3]
+
+[node name="Grupo" type="Node2D"]
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 200.0, -200.0, -260.0, 260.0 ],
+"_edit_lock_": true
+}
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+position = Vector2( 742.542, 0 )
+scale = Vector2( 73.7458, 32 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Estrella3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 780, 80 )
+
+[node name="Estrella9" parent="." instance=ExtResource( 1 )]
+position = Vector2( 720, 140 )
+
+[node name="Estrella12" parent="." instance=ExtResource( 1 )]
+position = Vector2( 840, 20 )
+
+[node name="Estrella13" parent="." instance=ExtResource( 1 )]
+position = Vector2( 900, 0 )
+
+[node name="Estrella5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 300, 0 )
+
+[node name="Estrella19" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1020, 0 )
+
+[node name="Estrella20" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1140, 0 )
+
+[node name="Estrella21" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1320, 0 )
+
+[node name="Estrella24" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1260, 0 )
+
+[node name="Estrella22" parent="." instance=ExtResource( 1 )]
+position = Vector2( 960, 0 )
+
+[node name="Estrella23" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1380, 0 )
+
+[node name="Estrella14" parent="." instance=ExtResource( 1 )]
+position = Vector2( 360, 0 )
+
+[node name="Estrella15" parent="." instance=ExtResource( 1 )]
+position = Vector2( 240, 0 )
+
+[node name="Pilar2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 280, 200 )
+
+[node name="Pilar10" parent="." instance=ExtResource( 2 )]
+position = Vector2( 420, 300 )
+
+[node name="Pilar18" parent="." instance=ExtResource( 2 )]
+position = Vector2( 520, 320 )
+
+[node name="Pilar11" parent="." instance=ExtResource( 2 )]
+position = Vector2( 940, 200 )
+
+[node name="Pilar15" parent="." instance=ExtResource( 2 )]
+position = Vector2( 800, 300 )
+
+[node name="Pilar12" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1120, 260 )
+
+[node name="Pilar13" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1300, 200 )
+
+[node name="Pilar5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 80, 220 )
+rotation = 0.174533
+
+[node name="Pilar7" parent="." instance=ExtResource( 2 )]
+position = Vector2( 620, 260 )
+rotation = -0.523599
+
+[node name="Pilar3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 460, -240 )
+rotation = 0.523599
+scale = Vector2( 1, -1 )
+
+[node name="Pilar6" parent="." instance=ExtResource( 2 )]
+position = Vector2( 40, -220 )
+rotation = 0.174533
+scale = Vector2( 1, -1 )
+
+[node name="Pilar4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1300, -200 )
+scale = Vector2( 1, -1 )
+
+[node name="Pilar9" parent="." instance=ExtResource( 2 )]
+position = Vector2( 940, -200 )
+scale = Vector2( 1, -1 )
+
+[node name="Pilar14" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1120, -260 )
+scale = Vector2( 1, -1 )
+
+[node name="Pilar8" parent="." instance=ExtResource( 2 )]
+position = Vector2( 660, -200 )
+scale = Vector2( 1, -1 )
+
+[node name="Pilar19" parent="." instance=ExtResource( 2 )]
+position = Vector2( 280, -200 )
+scale = Vector2( 1, -1 )
+
+[node name="Pilar16" parent="." instance=ExtResource( 2 )]
+position = Vector2( 740, -300 )
+scale = Vector2( 1, -1 )
+
+[node name="Pilar17" parent="." instance=ExtResource( 2 )]
+position = Vector2( 840, -300 )
+scale = Vector2( 1, -1 )
+
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]

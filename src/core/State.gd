@@ -6,13 +6,13 @@ const AVIONETAS = [{
 	precio = 0
 }, {
 	disponible = false,
-	precio = 50
-},  {
-	disponible = false,
 	precio = 100
 },  {
 	disponible = false,
-	precio = 200
+	precio = 300
+},  {
+	disponible = false,
+	precio = 400
 }]
 
 
